@@ -24,7 +24,10 @@ class GameAnalyser:
 
         filtered_players = self.get_filtered_players(game, hero_name)
 
-        map(lambda x: timeseriess.append(self.playerAnalyser.get_positional_timeseries(x)), filtered_players)
+        #map(lambda x: timeseriess.append(self.playerAnalyser.get_positional_timeseries(x)), filtered_players)
+        
+        for x in filtered_players:
+            timeseriess.append(self.playerAnalyser.get_positional_timeseries(x))
         return timeseriess
 
     def get_ability_priorities(self, game, hero_name=None):

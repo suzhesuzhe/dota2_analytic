@@ -1,4 +1,4 @@
-from AbilityPriorityGradients import AbilityPriorityGradients
+#from AbilityPriorityGradients import AbilityPriorityGradients
 
 
 class Player:
@@ -48,7 +48,7 @@ class Player:
 
     def set_hero_name(self, hero_name):
         self.hero_name = hero_name
-        self.ability_priority = AbilityPriorityGradients(hero_name)
+        #self.ability_priority = AbilityPriorityGradients(hero_name)
 
     def set_is_radiant(self, is_radiant):
         self.isRadiant = is_radiant

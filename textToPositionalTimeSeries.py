@@ -5,7 +5,7 @@ from gameAnalyser import GameAnalyser
 from textFileParser import TextFileParser
 import pandas as pd
 
-textFileDirectory = 'D:\\BigDota\\Txts\\720\\fewer-games\\'
+textFileDirectory = 'dota2games'
 textFileParser = TextFileParser(0.66, track_timeseriess=True)
 games = []
 
@@ -17,7 +17,7 @@ for fileName in fileNames:
         break
     try:
         games.append(newGame)
-        data_file = open(textFileDirectory + '\\' + fileName, encoding="utf-8-sig")
+        data_file = open(textFileDirectory + '/' + fileName, encoding="utf-8-sig")
         for line in data_file:
             textFileParser.parse_line(newGame.players, line)
     except FileNotFoundError:
